@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
 
         <motion.p
-          className="mt-12 text-xl sm:text-2xl tracking-widest text-pink-dark/75"
+          className="mt-12 text-4xl sm:text-5xl tracking-widest text-pink-dark/75"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
