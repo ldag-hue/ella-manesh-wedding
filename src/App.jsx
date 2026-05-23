@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
+import { Analytics } from '@vercel/analytics/react';
 import Hero from './components/sections/Hero';
 import Details from './components/sections/Details';
 import Timeline from './components/sections/Timeline';
@@ -70,6 +71,7 @@ function App() {
           <Footer />
         </div>
       </motion.div>
+      <Analytics />
     </>
   );
 }
