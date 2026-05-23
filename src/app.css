@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Playfair+Display+SC:ital,wght@0,400;1,400;1,700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Exact palette from brief */
+  --color-cream: #FAF9F6;
+  --color-cream-dark: #F0EDE8;
+  --color-sand: #EDE5DA;
+  --color-text: #2A2A2A;
+  --color-text-light: #4A4A4A;
+  --color-gold: #9A7B4F;
+  --color-gold-light: #B8956A;
+  --color-gold-dark: #7D6340;
+  --color-pink: #EBC7C7;
+  --color-pink-light: #F3DFDF;
+  --color-pink-dark: #D9ADAD;
+  --color-eucalyptus: #8B9E8B;
+  --color-eucalyptus-dark: #6B7E6B;
+  --color-eucalyptus-light: #A8B8A8;
+  --color-white: #FFFFFF;
+
+  --font-script: "Great Vibes", cursive;
+  --font-display: "Playfair Display SC", serif;
+  --font-serif: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+  --font-cinzel: "Cinzel", serif;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+}
+
+::selection {
+  background-color: var(--color-pink);
+  color: var(--color-text);
+}
+
+.page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+}
+
+.paper-texture {
+  background-color: var(--color-cream);
+  background-image:
+    radial-gradient(ellipse at 15% 60%, rgba(200,180,160,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 85% 30%, rgba(200,180,160,0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(180,160,140,0.02) 0%, transparent 70%);
+}
+
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+.tracking-ultra {
+  letter-spacing: 0.35em;
+}
+
+/* Hide scrollbar on webkit for cleaner story experience */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
