@@ -56,10 +56,7 @@ export default function Hero() {
           {WEDDING.familyIntro}
         </motion.p>
 
-        {/* Script title */}
-        <motion.p className="font-script text-2xl sm:text-3xl text-white font-bold mb-4 drop-shadow-lg" variants={child}>
-          l'union de
-        </motion.p>
+
 
         {/* Couple names */}
         <motion.h1 className="font-script text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-bold leading-tight drop-shadow-lg" variants={child}>
