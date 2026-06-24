@@ -16,7 +16,7 @@ export const weddingData = {
   },
   
   ceremony: {
-    time: "15h00",
+    time: "15h30",
     location: "Église Brother Home",
     address: "Lomé, Togo",
     mapsUrl: "https://maps.google.com/?q=Brother+Home+Lomé+Togo"
@@ -89,15 +89,15 @@ export const weddingData = {
   calendar: {
     title: "Ajouter à mon Agenda",
     eventTitle: "Mariage Ella & Manesh",
-    startTime: "2026-08-15T15:00:00",
+    startTime: "2026-08-15T15:30:00",
     endTime: "2026-08-15T23:00:00",
     location: "Église Brother Home, Lomé, Togo",
-    description: "Cérémonie religieuse à 15h, réception à 17h30 à l'Hôtel Sarakawa - Jardins & Salle Aledjo"
+    description: "Cérémonie religieuse à 15h30, réception à 17h30 à l'Hôtel Sarakawa - Jardins & Salle Aledjo"
   },
   
   timeline: [
     {
-      time: "15h00",
+      time: "15h30",
       title: "Cérémonie Religieuse",
       location: "Église Brother Home",
       description: "Échange des vœux et cérémonie religieuse",

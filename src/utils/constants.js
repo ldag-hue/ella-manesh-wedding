@@ -1,7 +1,7 @@
 export const WEDDING = {
   // Families
   families: ["Dagbovie", "Desouza", "Lalwani", "Vitolio"],
-  familyIntro: "Les Familles DAGBOVIE, DESOUZA, LALWANI ET VITOLIO, unies dans la joie, ont l'honneur de célébrer l'union de leur enfant",
+  familyIntro: "Les Familles DAGBOVIE, DESOUZA, LALWANI ET VITOLIO, unies dans la joie, ont l'honneur de célébrer l'union de leurs enfants",
 
   // Couple
   groomName: "Ella",
@@ -10,10 +10,10 @@ export const WEDDING = {
   brideInitial: "M",
 
   // Date
-  date: new Date("2026-08-15T15:00:00"),
+  date: new Date("2026-08-15T15:30:00"),
   dateDisplay: "15 Août 2026",
   dateUppercase: "15 AOÛT 2026",
-  time: "15h00",
+  time: "15h30",
   rsvpDeadline: "15 Juin 2026",
 
   // Venues
@@ -34,7 +34,7 @@ export const WEDDING = {
   // Programme (2 events only)
   events: [
     {
-      time: "15h00",
+      time: "15h30",
       title: "Cérémonie Religieuse",
       location: "Église Brother Home",
       icon: "rings",
@@ -85,10 +85,10 @@ export const WEDDING = {
   calendar: {
     title: "Ajouter à mon Agenda",
     eventTitle: "Mariage Ella & Manesh",
-    startTime: "2026-08-15T15:00:00",
+    startTime: "2026-08-15T15:30:00",
     endTime: "2026-08-15T23:00:00",
     location: "Église Brother Home, Lomé, Togo",
-    description: "Cérémonie religieuse à 15h, festivités à 18h à l'Hôtel Sarakawa - Jardins & Salle Aledjo",
+    description: "Cérémonie religieuse à 15h30, festivités à 18h à l'Hôtel Sarakawa - Jardins & Salle Aledjo",
   },
 };
 
