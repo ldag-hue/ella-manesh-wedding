@@ -24,9 +24,12 @@ const CONTENT = {
   },
 };
 
+// Jours restants, figé au chargement de la page (suffisant à la journée près)
+const DAYS_LEFT = Math.max(0, Math.ceil((WEDDING.date.getTime() - Date.now()) / 86400000));
+
 export default function VenueModal({ venue, onClose }) {
   const c = venue ? CONTENT[venue] : null;
-  const days = Math.max(0, Math.ceil((WEDDING.date.getTime() - Date.now()) / 86400000));
+  const days = DAYS_LEFT;
 
   return (
     <AnimatePresence>
