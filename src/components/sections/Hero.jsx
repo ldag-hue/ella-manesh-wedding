@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import FloralBorder from '../decorative/FloralBorder';
+import FallingPetals from '../decorative/FallingPetals';
 import CountdownTimer from '../ui/CountdownTimer';
 import { WEDDING } from '../../utils/constants';
 
@@ -40,6 +41,9 @@ export default function Hero() {
         <FloralBorder className="w-full h-full" />
       </div>
 
+      {/* Pétales dérivant sur la photo */}
+      <FallingPetals count={12} opacity={0.5} className="z-[15]" />
+
       {/* Content */}
       <motion.div
         className="relative z-20 text-center px-6"
@@ -59,9 +63,13 @@ export default function Hero() {
 
 
         {/* Couple names */}
-        <motion.h1 className="font-script text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-bold leading-tight drop-shadow-lg" variants={child}>
+        <motion.h1
+          className="font-script text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight gold-shimmer-light"
+          style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.55))' }}
+          variants={child}
+        >
           {WEDDING.groomName}
-          <span className="block font-script text-4xl sm:text-5xl text-white font-bold my-1 sm:my-2">
+          <span className="block font-script text-4xl sm:text-5xl font-bold my-1 sm:my-2">
             &
           </span>
           {WEDDING.brideName}

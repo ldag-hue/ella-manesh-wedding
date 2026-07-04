@@ -71,6 +71,42 @@ body {
   letter-spacing: 0.35em;
 }
 
+/* Texte or avec reflet lumineux qui balaye les lettres */
+.gold-shimmer {
+  background: linear-gradient(110deg,
+    #8A6A3A 0%, #B8956A 30%, #E8D5A8 44%, #F7EDD2 50%,
+    #E8D5A8 56%, #B8956A 70%, #8A6A3A 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer-sweep 4s ease-in-out infinite;
+}
+
+/* Variante claire : texte blanc traversé d'un reflet champagne (sur photo) */
+.gold-shimmer-light {
+  background: linear-gradient(110deg,
+    #FFFFFF 0%, #FFFFFF 38%, #F0DFB2 48%, #E4C98C 50%,
+    #F0DFB2 52%, #FFFFFF 62%, #FFFFFF 100%);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer-sweep 5s ease-in-out infinite;
+}
+
+@keyframes shimmer-sweep {
+  0% { background-position: 120% 0; }
+  60%, 100% { background-position: -120% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gold-shimmer,
+  .gold-shimmer-light {
+    animation: none;
+  }
+}
+
 /* Hide scrollbar on webkit for cleaner story experience */
 ::-webkit-scrollbar {
   width: 0;
