@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import PageWrapper from '../ui/PageWrapper';
 import Button from '../ui/Button';
 import { WEDDING } from '../../utils/constants';
+import JourneyMap from '../decorative/JourneyMap';
 
 export default function Venue() {
   return (
@@ -91,12 +92,8 @@ export default function Venue() {
           </div>
         </motion.div>
 
-        {/* Divider dots */}
-        <div className="flex items-center justify-center gap-2 mb-6">
-          <span className="w-1 h-1 rounded-full bg-gold/40" />
-          <span className="w-1 h-1 rounded-full bg-gold/40" />
-          <span className="w-1 h-1 rounded-full bg-gold/40" />
-        </div>
+        {/* Carte illustrée du trajet église → hôtel */}
+        <JourneyMap />
 
         {/* Reception venue */}
         <motion.div
