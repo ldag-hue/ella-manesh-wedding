@@ -5,14 +5,17 @@ import { motion } from 'motion/react';
 // puis un petit cœur voyage le long de la route (SMIL animateMotion).
 const ROUTE = 'M 92 92 C 132 138 176 74 210 110 S 254 168 286 150';
 
-function Marker({ x, y, label, sublabel, delay, children }) {
+function Marker({ x, y, label, sublabel, delay, onClick, children }) {
   return (
     <motion.g
       initial={{ opacity: 0, scale: 0.4 }}
       whileInView={{ opacity: 1, scale: 1 }}
+      whileHover={{ scale: 1.08 }}
+      whileTap={{ scale: 0.95 }}
       viewport={{ once: true }}
       transition={{ delay, duration: 0.6, type: 'spring', bounce: 0.45 }}
-      style={{ transformOrigin: `${x}px ${y}px` }}
+      style={{ transformOrigin: `${x}px ${y}px`, cursor: 'pointer' }}
+      onClick={onClick}
     >
       {/* Halo pulsant */}
       <circle cx={x} cy={y} r="14" fill="none" stroke="#9A7B4F" strokeWidth="0.8" opacity="0.5">
@@ -34,7 +37,7 @@ function Marker({ x, y, label, sublabel, delay, children }) {
   );
 }
 
-export default function JourneyMap() {
+export default function JourneyMap({ onSelect }) {
   return (
     <motion.div
       className="w-full my-10"
@@ -106,7 +109,7 @@ export default function JourneyMap() {
         </motion.g>
 
         {/* Marqueur : Église Brother Home */}
-        <Marker x={92} y={82} label="Église Brother Home" sublabel="Cérémonie · 15h30" delay={0.3}>
+        <Marker x={92} y={82} label="Église Brother Home" sublabel="Cérémonie · 15h30" delay={0.3} onClick={() => onSelect?.('ceremony')}>
           <g stroke="#9A7B4F" strokeWidth="1.1" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path d="M87 87 L87 81 L92 77 L97 81 L97 87 Z" />
             <path d="M92 77 L92 73 M90.4 74.6 L93.6 74.6" />
@@ -115,7 +118,7 @@ export default function JourneyMap() {
         </Marker>
 
         {/* Marqueur : Hôtel Sarakawa */}
-        <Marker x={286} y={160} label="Hôtel Sarakawa" sublabel="Réception · 18h00" delay={2.6}>
+        <Marker x={286} y={160} label="Hôtel Sarakawa" sublabel="Réception · 18h00" delay={2.6} onClick={() => onSelect?.('reception')}>
           <g stroke="#9A7B4F" strokeWidth="1.1" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path d="M280 165 L280 157 L292 157 L292 165 Z" />
             <path d="M283 160 L283 161.5 M286 160 L286 161.5 M289 160 L289 161.5" />
@@ -123,6 +126,15 @@ export default function JourneyMap() {
           </g>
         </Marker>
       </svg>
+      <motion.p
+        className="font-cinzel text-[8px] tracking-[0.3em] uppercase text-gold/70 mt-3"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 3.4, duration: 1 }}
+      >
+        Touchez un lieu pour découvrir les détails
+      </motion.p>
     </motion.div>
   );
 }
